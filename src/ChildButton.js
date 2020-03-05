@@ -44,6 +44,7 @@ const ChildButton = ({
   isOpen = false,
   onClick = null,
   icon,
+  children,
   ...rest
 }) => {
   const offsetX =
@@ -74,6 +75,7 @@ const ChildButton = ({
       }}
     >
       {icon}
+      {children}
     </Wrapper>
   );
 };
@@ -86,6 +88,7 @@ ChildButton.propTypes = {
   isOpen: PropTypes.bool,
   size: PropTypes.number,
   spacing: PropTypes.number,
+  children: PropTypes.node,
 };
 
 export default ChildButton;
